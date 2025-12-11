@@ -1,0 +1,4 @@
+import streamlit as stimport osfrom src.agent_core import run_agent_workflow
+st.set_page_config(page_title="Her ûeyi Bilen Robot | Sunum Modu", layout="wide")st.title("?? Her ûeyi Bilen Robot (Ajan Mimarisi)")st.caption("Äoklu Beyin, RAG ve Araá Kullançmç Aktif.")
+user_prompt = st.text_area("Robotunuza Sorunuz:", placeholder="Bana son dakika haberlerini bul ve îzetle.")
+if st.button("Robot Yançtlasçn (TÅm GÅcÅyle)", type="primary"):    if user_prompt:        with st.spinner('Ajançnçz planlama yapçyor, bilgi topluyor ve sentezliyor...'):            # Ajanç áalçütçrçyoruz. TÅm karmaüçk mantçk agent_core.py iáinde.            final_response = run_agent_workflow(user_prompt)            st.markdown("---")            st.success("### ?? Robotun Nihai Yançtç")            st.markdown(final_response)        else:            st.warning("LÅtfen bir soru girin.") 

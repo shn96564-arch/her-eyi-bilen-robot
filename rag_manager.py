@@ -1,0 +1,3 @@
+# Bu dosya RAG (ôzel Hafçza) sistemini yînetir.import os# from langchain.document_loaders import PyPDFLoader# from langchain.vectorstores import Chroma# from langchain.embeddings import SentenceTransformerEmbeddingsfrom config import VECTOR_DB_PATH, DOCS_PATH
+def initialize_rag_system():    """Vektîr veritabançnç baülatçr ve belgeleri yÅkler."""    print(f"RAG Sistemi baülatçlçyor. Vektîr yolu: {VECTOR_DB_PATH}")    # òleride, PyPDFLoader ve ChromaDB ile belgeler okunacak.    pass
+def retrieve_knowledge(user_query):    """Kullançcç sorgusuna en alakalç bilgiyi áeker."""    # Burasç veritabançnda arama yapacak.    return "ôzel Not: Baüarç iáin anahtar kelime 'ModÅler Yapç'dçr." 
